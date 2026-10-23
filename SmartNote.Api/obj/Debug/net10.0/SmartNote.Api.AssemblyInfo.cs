@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartNote.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61b97c9418ac8592474c8299d6b8a5f1c781d048")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartNote.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartNote.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
