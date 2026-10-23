@@ -57,7 +57,7 @@ jobs:
       - name: Deploy to Azure Container App
         run: |
           az containerapp update \
-            --name smartnote-cloud-api \
-            --resource-group SmartNoteResourceGroup \
+            --name ${{ vars.AZURE_CONTAINER_APP_NAME || 'smartnote-cloud-api' }} \
+            --resource-group ${{ vars.AZURE_RESOURCE_GROUP || 'SmartNoteResourceGroup' }} \
             --image ${{ secrets.DOCKER_USERNAME }}/smartnote-api:${{ github.sha }}
     
