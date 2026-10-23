@@ -1,0 +1,22 @@
+services:
+  smartnote-api:
+    build:
+      context: .
+      dockerfile: SmartNote.Api/Dockerfile
+    container_name: smartnote-api
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=SmartNoteDb;Username=sa;Password=${POSTGRES_PASSWORD:-admin}"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:17
+    container_name: smartnote-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: SmartNoteDb
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin}

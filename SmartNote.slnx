@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SmartNote.Api/SmartNote.Api.csproj" />
+  <Project Path="SmartNote.AppHost/SmartNote.AppHost.csproj" />
+</Solution>
