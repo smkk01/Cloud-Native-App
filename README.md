@@ -96,7 +96,9 @@ For a push to `main`, it:
 2. Builds the Docker image from `SmartNote.Api/Dockerfile`.
 3. Pushes `smartnote-api:<commit-sha>` to Docker Hub.
 4. Signs in to Azure and updates the `smartnote-cloud-api` Container App in
-   the `SmartNoteResourceGroup` resource group.
+   the `SmartNoteResourceGroup` resource group. The Container App must already
+   exist; to use a different name or resource group, set the repository
+   variables `AZURE_CONTAINER_APP_NAME` and `AZURE_RESOURCE_GROUP`.
 
 Configure these repository secrets in GitHub before pushing to `main`:
 
