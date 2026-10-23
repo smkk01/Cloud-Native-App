@@ -30,4 +30,4 @@ jobs:
         run: dotnet test SmartNote.slnx --no-restore
 
       - name: Build application
-        run: dotnet build SmartNote.slnx --no-restore  
+        run: dotnet build SmartNote.slnx --no-restore
