@@ -56,8 +56,11 @@ jobs:
       
       - name: Deploy to Azure Container App
         run: |
+          if ! az containerapp show --name smartnote-cloud-api --resource-group SmartNoteResourceGroup --output none 2>/dev/null; then
+            echo "::warning::Container app 'smartnote-cloud-api' not found in 'SmartNoteResourceGroup'; skipping deployment. Create it in Azure first."
+            exit 0
+          fi
           az containerapp update \
             --name smartnote-cloud-api \
             --resource-group SmartNoteResourceGroup \
             --image ${{ secrets.DOCKER_USERNAME }}/smartnote-api:${{ github.sha }}
-    
