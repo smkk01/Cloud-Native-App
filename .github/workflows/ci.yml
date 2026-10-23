@@ -42,7 +42,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-          -f SmartNote.Dockerfile \
+          -f SmartNote.Api/Dockerfile \
           -t ${{ secrets.DOCKER_USERNAME }}/smartnote-api:${{ github.sha }} .
 
       - name: Push Docker image
